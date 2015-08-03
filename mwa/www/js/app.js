@@ -1,8 +1,8 @@
 (function() {
     'use strict';
 
-    angular.module('mwa', ['ionic'])
-        .run(function($ionicPlatform) {
+    angular.module('mwa', ['ionic']).run(
+        function($ionicPlatform) {
             $ionicPlatform.ready(function() {
                 if (window.cordova && window.cordova.plugins.Keyboard) {
                     cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -12,4 +12,15 @@
                 }
             });
         });
+
+    angular.module('mwa').config(function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('/')
+
+        $stateProvider.state('home',
+        {
+            url: '/',
+            templateUrl: 'pages/home/index.html',
+            controller: 'HomeCtrl'
+        })
+    });
 })();

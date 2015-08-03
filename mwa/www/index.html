@@ -5,11 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
-
-
-    <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-
 </head>
 
 <body ng-app="mwa">
@@ -23,10 +19,7 @@
                     <h1 class="title">Modern Web Store</h1>
                 </ion-header-bar>
                 <ion-content>
-                    <h1>Bem vindo!</h1>
-                    <p>
-                        Só aqui na Modern Web Store você encontra tudo que precisa para sua vida Geek
-                    </p>
+                    <ui-view></ui-view>
                 </ion-content>
             </ion-side-menu-content>
             <ion-side-menu side="left">
@@ -41,6 +34,7 @@
     <script src="cordova.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/shared/headbar-ctrl.js"></script>
+    <script src="js/controllers/home/home-ctrl.js"></script>
 </body>
 
 </html>
